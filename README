@@ -2,8 +2,12 @@ Though PDF has made obsolete PostScript sometimes I still find it useful.
 
 A few minor attempts are made to fix old-fashioned constructs.
 
+HOW TO USE?
+ASDF load it and the only API is PLISP:PS. A introduction to
+Plisp is resident in doc/.
+
 TODOs:
 
 Enable interactive programming.
 
-
+Pretty printing generated PS file.
