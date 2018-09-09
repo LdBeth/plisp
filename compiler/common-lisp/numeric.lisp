@@ -4,8 +4,10 @@
 
 ;;;;  Basic numeric operators are defined here.
 
+(in-package #:plisp)
+
 ;;; CL functions implemented here:
-;;;   + * - / 
+;;;   + * - /
 
 ;;; + has variable # of args, does constant folding
 

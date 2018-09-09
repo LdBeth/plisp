@@ -8,6 +8,7 @@
 ;;; ps-compile is the top level entry to the compiler.  It compiles any
 ;;; random postscript code.  The number of values produced by the code compiled
 ;;; is returned.
+(in-package #:plisp)
 
 (defun ps-compile (fm)
  (cond ((or (stringp fm) (numberp fm) (arrayp fm) (characterp fm)

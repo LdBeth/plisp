@@ -7,6 +7,7 @@
 ;;; Common Lisp functions implemented here:
 ;;;   progn if and or cond when unless prog1
 
+(in-package #:plisp)
 
 ;;;  Progn - compile for no value except last one
 

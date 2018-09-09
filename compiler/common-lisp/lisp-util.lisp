@@ -4,6 +4,8 @@
 
 ;;;;  Random useful lisp functions
 
+(in-package #:plisp)
+
 ;;; CL functions implemented here:
 ;;;   = > < >= <= /= 1+ 1- incf decf vector quote symbol-value elt
 ;;;   postscript (non CL) arrayp vectorp dictp (non CL) fontp (non CL)

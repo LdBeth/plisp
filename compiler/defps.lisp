@@ -12,6 +12,7 @@
 ;;;  program which may be called directly.  Others may be generated during
 ;;;  compilation.  The numbers are values in, values out.  Defaults 1,1.
 ;;;  See ps reference manual p 104.
+(in-package #:plisp)
 
 (defun ps-init ()
   (mapc #'def-primitive

@@ -3,6 +3,7 @@
 ;;;   so long as this copyright notice is retained.
 
 ;;;  This file contains defvars for the postscript interpreter.
+(in-package #:plisp)
 
 (defvar *main-program* nil "Main postscript program")
 (defvar *default-plisp-file-type* #P".pl" "File type of plist files")
@@ -34,3 +35,5 @@
 (defvar unknown-frames nil "Frames being scanned for recursion")
 (defvar main-env nil "Environment for mail program")
 (defvar main-code nil "Holds main program for output routine")
+(defvar *assume-0-res* 'warn "Use T, nil, or warn")
+

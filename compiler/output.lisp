@@ -6,6 +6,7 @@
 ;;;  This outputs a single token.  Beware of case problems.  A very hokey
 ;;;  algorithm is user for formatting.  Read the generated postscript
 ;;;  at your own risk!
+(in-package #:plisp)
 
 (defun write-token (tok)
   (cond ((consp tok)  ; only for quoted items and frame sizes (& null)

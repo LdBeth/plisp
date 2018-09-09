@@ -2,17 +2,19 @@
 ;;;   Permission is given to freely modify and distribute this code
 ;;;   so long as this copyright notice is retained.
 
-;;; Stuff which handles functional values.
+;;; Stuff which handles functional values
+
+(in-package #:plisp)
 
 ;;; Common lisp functions implemented here:
 ;;;   function (#') funcall apply
 
 (define-ps function
-  (let ((fun (cadr ps-form)))
-    (cond ((symbolp fun) (compile-q fun))
-	  ((and (consp fun) (eq (car fun) 'lambda))
-	   (compile-lambda (cadr fun) (cddr fun)))
-	  (T (ps-error "Can't interpret the following as a function" fun))))
+    (let ((fun (cadr ps-form)))
+      (cond ((symbolp fun) (compile-q fun))
+            ((and (consp fun) (eq (car fun) 'lambda))
+             (compile-lambda (cadr fun) (cddr fun)))
+            (T (ps-error "Can't interpret the following as a function" fun))))
   1)
 
 (defun compile-lambda (args body)

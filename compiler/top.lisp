@@ -1,11 +1,12 @@
 
 ;;;  This is the top level of the lisp to postscript routines.
 
+(in-package #:plisp)
 
 ;; ps is the top level entry.  The argument is the file name.
 
 (defun ps (ps-file)
-  (unless *ps-inited* (ps-init))
+  (unless *ps-init* (ps-init))
     ;; Initialize global structures
     (setf *main-program* nil)
     (setf error-count 0)
@@ -75,12 +76,13 @@
 ;;  hand each form to ps-interpret-form.
 
 (defun interpret-file (fname)
-  (let (ps-form)
+  (let ((*package* (find-package :plisp))
+        ps-form)
     (with-open-file
-	(ps-input fname :direction :input)
-	(while (not (eql (setf ps-form (read ps-input nil '***PSEOF***))
-			 '***PSEOF***))
-	       (ps-interpret-form ps-form)))))
+        (ps-input fname :direction :input)
+      (while (not (eql (setf ps-form (read ps-input nil '***PSEOF***))
+                       '***PSEOF***))
+        (ps-interpret-form ps-form)))))
 
 ;;  Decide what to do with a random form at the top level.  There are a
 ;;  few special cases, otherwise just tack things onto the end of the

@@ -4,6 +4,8 @@
 
 ;;;; Control structures with looping
 
+(in-package #:plisp)
+
 ;;; Common lisp functions implemented here:
 ;;;  do do* while (not CL!) dolist dotimes dodict (not CL) map mapcar
 

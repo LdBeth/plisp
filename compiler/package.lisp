@@ -1,1 +1,3 @@
-(defpackage #:plisp (:use :common-lisp))
+(defpackage #:plisp
+  (:use #:common-lisp)
+  (:export #:ps))

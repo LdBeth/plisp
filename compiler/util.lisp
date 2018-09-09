@@ -1,6 +1,7 @@
 ;;; Copyright (c) 1987 John Peterson
 ;;;   Permission is given to freely modify and distribute this code
 ;;;   so long as this copyright notice is retained.
+(in-package #:plisp)
 
 (defun put-att (table key att val)
     (let* ((cur-alist (gethash key table))

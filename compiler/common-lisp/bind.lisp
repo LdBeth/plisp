@@ -7,6 +7,8 @@
 ;;; CL functions implemented:
 ;;;   let let* setq psetq setf
 
+(in-package #:plisp)
+
 ;;; let looks like procedure invocation
 
 (define-ps let

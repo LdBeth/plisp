@@ -1,5 +1,6 @@
 
 ;;;  This file contains defvars for the postscript interpreter.
+(in-package #:plisp)
 
 (defvar main-program nil "Main postscript program")
 (defvar ps-file nil "Name of root file")

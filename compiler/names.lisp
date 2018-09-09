@@ -3,6 +3,7 @@
 ;;;   so long as this copyright notice is retained.
 
 ;;;;  This is the name resolver for PLisp.
+(in-package #:plisp)
 
 (defun lookup-name (name)   ;;  Lookup the name in an environment
   (let (s-value temp

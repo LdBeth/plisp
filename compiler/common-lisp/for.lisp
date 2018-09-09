@@ -2,6 +2,7 @@
 ;;;   Permission is given to freely modify and distribute this code
 ;;;   so long as this copyright notice is retained.
 
+(in-package #:plisp)
 
 ;;;;  For macros.  Right now, just simple from, in, and do.
 

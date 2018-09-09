@@ -3,6 +3,7 @@
 ;;;   so long as this copyright notice is retained.
 
 ;;;  Find out where all non-recursive functions are.
+(in-package #:plisp)
 
 (defun flow-analysis ()
   (setf unknown-frames nil)

@@ -4,6 +4,8 @@
 
 ;;;   Support for strange common lisp parameter passing.
 
+(in-package #:plisp)
+
 (defun ps-compile-call (hash name fm)
   (import-name hash name 'f)
   (push-att frame-table current-frame 'uses name)

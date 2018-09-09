@@ -4,6 +4,8 @@
 
 ;;;; Support enough multiple value stuff to be useable
 
+(in-package #:plisp)
+
 ;;; CL functions implemented here:
 ;;;  values multiple-value-call multiple-value-bind multiple-value-list
 ;;;  Note: setq subsumes multiple-value-setq
