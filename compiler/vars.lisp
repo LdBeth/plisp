@@ -9,6 +9,7 @@
 (defvar *default-plisp-file-type* #P".pl" "File type of plist files")
 (defvar *ps-init* nil "Whether PostScript functions are initialized.")
 (defvar ps-file nil "Name of root file")
+(defvar *current-dir* nil "Directory of current processing file.")
 (defvar ps-output nil "Output stream")
 (defvar code-stream nil "Code stream")
 (defvar ps-globals nil "List of all global variables")

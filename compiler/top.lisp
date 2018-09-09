@@ -14,6 +14,8 @@
     (setf next-frame 1)
     (setf current-frame '**main**)
     (setf current-fn '**main**)
+  (setf *current-dir* (make-pathname :directory
+                                     (pathname-directory ps-file)))
     (setf frame-table (make-hash-table))
     (setf to-compile nil)
     (setf to-init nil)
@@ -79,7 +81,7 @@
   (let ((*package* (find-package :plisp))
         ps-form)
     (with-open-file
-        (ps-input fname :direction :input)
+        (ps-input (merge-pathnames fname *current-dir*) :direction :input)
       (while (not (eql (setf ps-form (read ps-input nil '***PSEOF***))
                        '***PSEOF***))
         (ps-interpret-form ps-form)))))
@@ -215,7 +217,7 @@
 
 (defun ps-load-library (libname)
   (let* ((current-table (make-hash-table))
-	 (current-env (list current-table)))
+         (current-env (list current-table)))
     (push current-table env-list)
     (interpret-file libname)))
 
