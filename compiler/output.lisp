@@ -137,7 +137,7 @@
 
 (defun ps-write-code ()
     (setf current-col 0)  ; output column
-    (format ps-output "%!~%")  ; our laser writer spooler needs this
+    (format ps-output "%!PS-Adobe-3.0~%")  ; our laser writer spooler needs this
     (for (:in x (nreverse dict-code))
 	 (:do (write-token x)))
     (for (:in x (nreverse init-code))
