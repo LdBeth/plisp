@@ -210,6 +210,7 @@
       (rlineto 2 0)
       (arc 5 0)
       (arcn 5 0)
+      (arct 5 0)
       (arcto 5 4)
       (curveto 6 0)
       (rcurveto 6 0)
